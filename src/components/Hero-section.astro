@@ -1,0 +1,42 @@
+---
+ import LinkedinPic from '../../public/linkedinPic.jpg'
+ import linkedin from '../../public/linkedin.svg'
+ import github from '../../public/github.svg'
+
+---
+
+<section class="flex flex-col md:flex-row gap-8 items-center md:h-40 h-[350px] my-20">
+    <section>
+        <img
+            src={LinkedinPic.src}
+            alt="Profile Picture"
+            class="w-40 h-40 rounded-full object-contain"
+        />        
+    </section>
+    <section class="flex flex-col gap-2 h-full relative">
+        <article class="mt-6">
+            <p class="flex flex-col text-2xl">
+                Hey, I'm Gaurav Kumar Karki. 
+                <span class="text-gray-400 pt-2">
+                    I am a software engineer and a tech enthusiast.
+                </span>
+            </p>
+        </article>
+        <ul class="flex items-center gap-6 absolute bottom-0 text-sm">
+            <li class="flex items-center gap-2 cursor-pointer hover:text-blue-500">
+                <img
+                    src={linkedin.src}
+                    class="w-6 h-6 rounded-full object-fill overflow-clip filter invert"
+                />
+                <a>LinkedIn</a>
+            </li>
+            <li class="flex items-center gap-2 hover:text-gray-400 cursor-pointer">
+                <img
+                    src={github.src}
+                    class="w-4 h-4 rounded-full object-contain overflow-clip filter invert"
+                />
+                <a>Github</a>
+            </li>
+        </ul>
+    </section>
+</section>
