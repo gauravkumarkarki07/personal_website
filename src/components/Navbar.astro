@@ -1,9 +1,30 @@
-<section class="flex justify-between items-center font-semibold my-8">
-    <h1 class="text-xl hover:text-purple-500 cursor-pointer">Gaurav Kumar Karki</h1>
-    <nav class="flex items-center gap-4">
-        <a href="/" class="hover:text-purple-500">Home</a>
-        <a href="/projects" class="hover:text-purple-500">Projects</a>
-        <a href="/" class="hover:text-purple-500">Work Experience</a>
-        <a href="/" class="hover:text-purple-500">Blogs</a>
-    </nav>
+---
+import Menu from "../../public/menu.svg";
+---
+
+<section
+  id="nav-menu"
+  class="md:flex md:flex-row flex-col justify-center md:justify-between items-center font-semibold my-8 sm:hidden hidden"
+>
+  <h1 class="text-xl font-semibold hover:text-purple-500 cursor-pointer text-center w-full mb-2">
+    Gaurav Kumar Karki
+  </h1>
+  <nav class="flex md:flex-row flex-col items-center gap-4">
+    <a href="/" class="hover:text-purple-500">Home</a>
+    <a href="/projects" class="hover:text-purple-500">Projects</a>
+    <a href="/" class="hover:text-purple-500 text-nowrap">Work Experience</a>
+    <a href="/" class="hover:text-purple-500">Blogs</a>
+  </nav>
 </section>
+<img
+  id="hamburger"
+  src={Menu.src}
+  class="w-8 h-8 cursor-pointer invert filter hover:scale-110 md:hidden absolute right-2 top-4"
+  alt="Menu Icon"
+/>
+<script>
+  document.getElementById("hamburger")?.addEventListener("click", function () {
+    const navMenu = document.getElementById("nav-menu");
+    navMenu?.classList.toggle("hidden");
+  });
+</script>
