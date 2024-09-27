@@ -1,22 +1,20 @@
 ---
- import LinkedinPic from '../../public/linkedinPic.jpg'
+ import Hero from '../../public/hero.svg'
  import linkedin from '../../public/linkedin.svg'
  import github from '../../public/github.svg'
 
 ---
 
-<section class="flex flex-col md:flex-row gap-8 items-center md:h-[150px] h-[500px] my-20">
-    <section>
-        <img
-            src={LinkedinPic.src}
-            alt="Profile Picture"
-            class="w-40 h-40 rounded-full object-cover"
-        />        
-    </section>
+<section class="flex flex-col-reverse md:flex-row gap-8 items-center md:h-[250px] h-[530px] my-20">
     <section class="flex flex-col gap-2 h-full relative px-4">
         <article class="mt-6">
-            <p class="flex flex-col text-4xl">
-                Hey, I'm Gaurav Kumar Karki. 
+            <p class="flex flex-col text-6xl gap-2">
+                <span>
+                    Hi !
+                </span>
+                <span>
+                    I'm Gaurav Kumar Karki. 
+                </span>
                 <span class="text-gray-400 pt-2 text-xl">
                     I am a Software Engineer and a Tech Enthusiast from Nepal.
                 </span>
@@ -38,5 +36,11 @@
                 <a href="https://github.com/gauravkumarkarki07" target="_blank" rel="noopener noreferrer">Github</a>
             </li>
         </ul>
+    </section>
+    <section>
+        <img
+            src={Hero.src}
+            class="h-[150px] w-auto hover:scale-125 transition-all duration-200"
+        />
     </section>
 </section>
