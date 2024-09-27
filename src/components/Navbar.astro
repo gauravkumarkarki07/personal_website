@@ -2,19 +2,21 @@
 import Menu from "../../public/menu.svg";
 ---
 
-<section id="nav-menu" class="hidden md:flex md:flex-row items-center justify-between py-2">
-  <a
-    class="text-xl cursor-pointer hover:text-purple-500 text-center py-2"
-    href="/"
-  >
-    Gaurav Kumar Karki
-</a>
-  <nav class="flex md:flex-row flex-col items-center gap-4">
-    <a href="/" class="hover:text-purple-500">Home</a>
-    <a href="/projects" class="hover:text-purple-500 text-nowrap">About Me</a>
-    <a href="/" class="hover:text-purple-500 text-nowrap">My Projects</a>
-    <a href="/" class="hover:text-purple-500">Blogs</a>
-  </nav>
+<section id="nav-menu" class="hidden md:block">
+  <section class="flex flex-col gap-2 md:flex md:flex-row items-center justify-between py-2">
+    <a
+      class="text-xl cursor-pointer hover:text-purple-500 py-2"
+      href="/"
+    >
+      Gaurav Kumar Karki
+    </a>
+    <nav class="flex md:flex-row flex-col items-center gap-4">
+      <a href="/" class="hover:text-purple-500">Home</a>
+      <a href="/projects" class="hover:text-purple-500 text-nowrap">About Me</a>
+      <a href="/" class="hover:text-purple-500 text-nowrap">My Projects</a>
+      <a href="/" class="hover:text-purple-500">Blogs</a>
+    </nav>
+  </section>
 </section>
 <img
   id="hamburger"
