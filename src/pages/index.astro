@@ -6,15 +6,21 @@ import Layout from "../layout/layout.astro";
 import Scroll from "../components/Scroll.astro";
 import AboutSection from "../components/AboutSection.astro";
 import Divider from "../components/Divider.astro";
+import Experience from "../components/Experience.astro";
 ---
 
 <Layout>
   <section class="flex flex-col gap-8">
-    <HeroSection />
+    <section id="home">
+      <HeroSection />
+    </section>
     <Scroll />
     <section id="about">
       <AboutSection/>
-      <Divider/>
+    </section>
+    <Divider/>
+    <section id="experience">
+      <Experience/>
     </section>
   </section>
 </Layout>
