@@ -11,10 +11,10 @@ import Menu from "../../public/menu.svg";
       Gaurav Kumar Karki
     </a>
     <nav class="flex md:flex-row flex-col items-center gap-4">
-      <a href="/#home" class="hover:text-purple-500">Home</a>
-      <a href="/#about" class="hover:text-purple-500 text-nowrap">About Me</a>
-      <a href="/#experience" class="hover:text-purple-500 text-nowrap">Experience</a>
-      <a href="/blog" class="hover:text-purple-500">Blogs</a>
+      <a href="/#home" class="hover:text-purple-500 nav-link">Home</a>
+      <a href="/#about" class="hover:text-purple-500 text-nowrap nav-link">About Me</a>
+      <a href="/#experience" class="hover:text-purple-500 text-nowrap nav-link">Experience</a>
+      <a href="/blog" class="hover:text-purple-500 nav-link">Blogs</a>
     </nav>
   </section>
 </section>
@@ -30,4 +30,31 @@ import Menu from "../../public/menu.svg";
     const navMenu = document.getElementById("nav-menu");
     navMenu?.classList.toggle("hidden");
   });
+
+  function setActiveLink() {
+    const currentHash = window.location.hash;
+    const links = document.querySelectorAll('.nav-link');
+    console.log('Current Hash:', currentHash);
+
+    links.forEach(link => {
+      link.classList.remove('text-purple-500');
+      console.log('Link HREF:', link.getAttribute('href'));
+
+      const href = link.getAttribute('href')?.replace(/^\//, '');
+      console.log("Normalize",href)
+      if (href === currentHash) {
+        link.classList.add('text-purple-500'); 
+        return;
+      }
+      if(window.location.pathname === link.getAttribute('href')){
+        link.classList.add('text-purple-500'); 
+        return;
+      }
+    });
+  }
+
+  window.addEventListener('load',setActiveLink);
+
+  window.addEventListener('hashchange',setActiveLink);
+
 </script>
