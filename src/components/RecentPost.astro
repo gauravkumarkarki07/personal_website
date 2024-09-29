@@ -1,14 +1,18 @@
 ---
+import BlogCard from "./BlogCard.astro";
 import BlogPostCard from "./BlogPostCard.astro";
 ---
 
-<section class="max-h-[800px] flex flex-col gap-6 px-2 py-2 my-10 text-justify overflow-clip">
-    <h1 class="text-2xl px-2">RECENT POSTS</h1>
-    <section class="flex flex-col gap-12">
-        <BlogPostCard/>
-        <BlogPostCard/>
-        <span class="hover:text-purple-500 cursor-pointer font-semibold px-2">
-            View All →
-        </span>
+<section class="flex flex-col gap-6 px-2 py-2 my-10 text-justify overflow-clip">
+  <h1 class="text-2xl px-2">RECENT POSTS</h1>
+  <section class="flex flex-col gap-12 mt-4">
+    <section class="flex flex-row gap-36 flex-wrap">
+      <BlogCard />
+      <BlogCard />
+      <BlogCard />
     </section>
+    <a class="hover:text-purple-500 cursor-pointer font-semibold px-2" href="/blog">
+      View All →
+    </a>
+  </section>
 </section>

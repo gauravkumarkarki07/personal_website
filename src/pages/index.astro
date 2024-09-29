@@ -4,12 +4,17 @@ import Projects from "../components/Projects.astro";
 import RecentPost from "../components/RecentPost.astro";
 import Layout from "../layout/layout.astro";
 import Scroll from "../components/Scroll.astro";
+import AboutSection from "../components/AboutSection.astro";
+import Divider from "../components/Divider.astro";
 ---
 
 <Layout>
   <section class="flex flex-col gap-8">
     <HeroSection />
     <Scroll />
-    <RecentPost />
+    <section id="about">
+      <AboutSection/>
+      <Divider/>
+    </section>
   </section>
 </Layout>
